@@ -25,3 +25,4 @@ ENV/
 # System operacyjny
 .DS_Store
 Thumbs.db
+.env
