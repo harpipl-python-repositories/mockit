@@ -9,7 +9,7 @@ class ProjectType(models.TextChoices):
 class Project(models.Model):
     logical_id = models.UUIDField(unique=True, default=uuid.uuid4, editable=False)
     name = models.CharField(max_length=100)
-    description = models.TextField()
+    description = models.TextField(null=True)
     type = models.CharField(max_length=20, choices=ProjectType.choices, default=ProjectType.REST)
 
     def __str__(self):
