@@ -6,6 +6,8 @@ from .serializers import ProjectSerializer, ApplicationSerializer, ResourceSeria
 class ProjectViewSet(viewsets.ModelViewSet):
     queryset = Project.objects.all()
     serializer_class = ProjectSerializer
+    lookup_field = 'logical_id'
+    lookup_url_kwarg = 'logicalId'
 
 
 class ApplicationViewSet(viewsets.ModelViewSet):
